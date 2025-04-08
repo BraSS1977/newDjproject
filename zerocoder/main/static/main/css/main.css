@@ -1,0 +1,59 @@
+
+
+
+
+
+
+<style>
+        body {
+            display: flex;
+        }
+        aside {
+            background-color: #f8f9fa;
+            padding: 150px;
+            width: 10px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        header {
+    background-color: #333;
+}
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin: 0 15px; /* расстояние между элементами меню */
+        }
+
+        .menu a {
+            color: white; /* цвет текста */
+            text-decoration: none; /* убираем подчеркивание */
+            padding: 10px; /* внутренние отступы */
+            transition: background-color 0.3s; /* плавный переход при наведении */
+        }
+
+        .menu a:hover {
+            background-color: #555; /* цвет фона при наведении */
+        }
+
+        /* main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        img {
+            border-radius: 50%;
+        }
+        .nav-link {
+            font-size: 1.2em;
+        } */
+    </style>

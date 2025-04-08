@@ -1,0 +1,56 @@
+{% load static %}
+
+<! doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    {% block title %}
+
+    {% endblock %}
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            {% include 'main/menu.html' %}
+        </nav>
+    </header>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col -md-3 col-lg-2">
+
+                <img src="{% static 'main/img/bot.png' %}" alt="Бот-помощник" class="aside-img img-fluid rounded-circle">
+
+                <span class="aside-title">BotDjango</span>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="{% url 'home' %}">Главная</a>
+                <a class="nav-link" href="{% url 'page2' %}">Вторая страница</a>
+                <a class="nav-link" href="{% url 'page3' %}">Третья страница</a>
+                <a class="nav-link" href="{% url 'page4' %}">Четвертая страница</a>
+            </nav>
+
+            </aside>
+
+            <main class="col -md-9 col-lg-10">
+                {% block content %}
+
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    {% include 'main/footer.html' %}
+</body>
+</html>

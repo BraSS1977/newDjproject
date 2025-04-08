@@ -1,13 +1,28 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("<h1>Это мой первый проект на Django</h1>")
+    return render (request, 'main/index.html')
 
-def data(request):
-    return HttpResponse("<h1>1,2,3,4,5</h1>")
+def new(request):
+    return render (request, 'main/new.html')
 
-def test(request):
-    return HttpResponse("<h1>Проверка работы программы</h1>")
+def Thirdpage(request):
+    return render (request, 'main/Thirdpage.html')
 
+def fourthpage(request):
+    return render (request, 'main/fourthpage.html')
 
-# Create your views here.
+# Создаем верхнее меню
+def about(request):
+    return render (request, 'main/about.html')
+
+def services(request):
+    return render (request, 'main/services.html')
+
+def contacts(request):
+    return render (request, 'main/contacts.html')
+
+def terms(request):
+    return render (request, 'main/terms.html')
+
